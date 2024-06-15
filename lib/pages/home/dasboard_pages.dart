@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_coffesshop_ui/core/widgets/home_fragments.dart';
+import 'package:flutter_coffesshop_ui/core/constants/colors.dart';
+import 'package:flutter_coffesshop_ui/pages/home/fragments/home_fragments.dart';
 import 'package:gap/gap.dart';
 
 class DashboardPage extends StatefulWidget {
@@ -36,28 +37,45 @@ class _DashboardPageState extends State<DashboardPage> {
       },
     ];
     return Scaffold(
-      bottomNavigationBar: Container(
-        height: 60,
+      bottomNavigationBar: Padding(
+        
+        padding: EdgeInsets.symmetric(horizontal: 30),
         child: Row(
+          // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: List.generate(menu.length, (index) {
             Map item = menu[index];
             bool isActive = indexMenu == index;
-            return Column(
-              children: [
-                ImageIcon(AssetImage(item[isActive? 'icon_active' : 'icon'],
-                ),
-                ),
-                if(isActive)const Gap(6),
-                if(isActive) 
-                Container(
-                  height: 5,
-                  width: 10,
-                  decoration: BoxDecoration(
-                    color: Color(0xffC67C4E),
-                    borderRadius: BorderRadius.circular(18),
+            return Expanded(
+              child: InkWell(
+                onTap:() {},
+                child: SizedBox(
+                  height: 70,
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min ,
+                    children: [
+                      const Gap(20),
+                      ImageIcon
+                        (AssetImage
+                          (item[isActive? 'icon_active' : 'icon'],
+                          ),
+                          size: 24,
+                          color: (isActive? AppColors.primary : AppColors.Lighter),
+                        ),
+                      if(isActive)const Gap(6),
+                      if(isActive) 
+                      Container(
+                        height: 5,
+                        width: 10,
+                        decoration: BoxDecoration(
+                          // color: Color(0xffC67C4E),
+                          color: AppColors.primary,
+                          borderRadius: BorderRadius.circular(18),
+                        ),
+                      )
+                    ],  
                   ),
-                )
-              ],  
+                ),
+              ),
             );
           }),
         ),

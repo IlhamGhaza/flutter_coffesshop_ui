@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_coffesshop_ui/core/constants/colors.dart';
 import 'package:flutter_coffesshop_ui/core/widgets/button_primary.dart';
 import 'package:gap/gap.dart';
 
@@ -51,7 +52,7 @@ class OnboardPages extends StatelessWidget {
                     style: TextStyle(
                       fontWeight: FontWeight.normal,
                       fontSize: 14,
-                      color: Color(0xffA2A2A2),
+                      color: AppColors.Lighter
                     ),
                   ),
                   const Gap(30),
