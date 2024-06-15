@@ -11,34 +11,35 @@ class DashboardPage extends StatefulWidget {
 }
 
 class _DashboardPageState extends State<DashboardPage> {
+  int indexMenu = 0;
+  final menu = [
+    {
+      'icon': 'assets/ic_home_border.png',
+      'icon_active': 'assets/ic_home_filled.png',
+      'fragment': const HomeFragments(),
+    },
+    {
+      'icon': 'assets/ic_heart_border.png',
+      'icon_active': 'assets/ic_heart_border.png',
+      'fragment': const Center(child: Text('Favorite')),
+    },
+    {
+      'icon': 'assets/ic_bag_border.png',
+      'icon_active': 'assets/ic_bag_border.png',
+      'fragment': const Center(child: Text('Bag')),
+    },
+    {
+      'icon': 'assets/ic_notification_border.png',
+      'icon_active': 'assets/ic_notification_border.png',
+      'fragment': const Center(child: Text('Notification')),
+    },
+  ];
+
   @override
   Widget build(BuildContext context) {
-    int indexMenu = 0;
-    final menu = [
-      {
-        'icon': 'assets/ic_home_border.png',
-        'icon_active': 'assets/ic_home_filled.png',
-        'fragment': const HomeFragments(),
-      },
-      {
-        'icon': 'assets/ic_heart_border.png',
-        'icon_active': 'assets/ic_heart_border.png',
-        'fragment': const Center(child: Text('Favorite')),
-      },
-      {
-        'icon': 'assets/ic_bag_border.png',
-        'icon_active': 'assets/ic_bag_border.png',
-        'fragment': const Center(child: Text('Bag')),
-      },
-      {
-        'icon': 'assets/ic_notification_border.png',
-        'icon_active': 'assets/ic_notification_border.png',
-        'fragment': const Center(child: Text('Notification')),
-      },
-    ];
     return Scaffold(
+      body: menu[indexMenu]['fragment'] as Widget,
       bottomNavigationBar: Padding(
-        
         padding: EdgeInsets.symmetric(horizontal: 30),
         child: Row(
           // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -47,32 +48,38 @@ class _DashboardPageState extends State<DashboardPage> {
             bool isActive = indexMenu == index;
             return Expanded(
               child: InkWell(
-                onTap:() {},
+                onTap: () {
+                  indexMenu = index;
+                  setState(() {
+                    
+                  });
+                },
                 child: SizedBox(
                   height: 70,
                   child: Column(
-                    mainAxisSize: MainAxisSize.min ,
+                    mainAxisSize: MainAxisSize.min,
                     children: [
                       const Gap(20),
-                      ImageIcon
-                        (AssetImage
-                          (item[isActive? 'icon_active' : 'icon'],
+                      ImageIcon(
+                        AssetImage(
+                          item[isActive ? 'icon_active' : 'icon'],
+                        ),
+                        size: 24,
+                        color:
+                            (isActive ? AppColors.primary : AppColors.Lighter),
+                      ),
+                      if (isActive) const Gap(6),
+                      if (isActive)
+                        Container(
+                          height: 5,
+                          width: 10,
+                          decoration: BoxDecoration(
+                            // color: Color(0xffC67C4E),
+                            color: AppColors.primary,
+                            borderRadius: BorderRadius.circular(18),
                           ),
-                          size: 24,
-                          color: (isActive? AppColors.primary : AppColors.Lighter),
-                        ),
-                      if(isActive)const Gap(6),
-                      if(isActive) 
-                      Container(
-                        height: 5,
-                        width: 10,
-                        decoration: BoxDecoration(
-                          // color: Color(0xffC67C4E),
-                          color: AppColors.primary,
-                          borderRadius: BorderRadius.circular(18),
-                        ),
-                      )
-                    ],  
+                        )
+                    ],
                   ),
                 ),
               ),
