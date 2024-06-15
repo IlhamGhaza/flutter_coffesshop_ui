@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_coffesshop_ui/pages/home/dasboard_pages.dart';
-import 'package:flutter_coffesshop_ui/widgets/button_primary.dart';
+import 'package:flutter_coffesshop_ui/core/widgets/button_primary.dart';
 import 'package:gap/gap.dart';
 
 class OnboardPages extends StatelessWidget {
