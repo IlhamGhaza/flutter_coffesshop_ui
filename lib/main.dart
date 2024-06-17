@@ -27,7 +27,7 @@ class MainApp extends StatelessWidget {
         '/dashboard': (context) => const DashboardPage(),
         '/detail': (context) {
           Coffee coffee = ModalRoute.of(context)!.settings.arguments as Coffee;
-          return DetailPages(coffee: coffee);
+          return DetailPage(coffee: coffee);
         },
       },
     );
