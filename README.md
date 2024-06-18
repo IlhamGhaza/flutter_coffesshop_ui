@@ -10,7 +10,7 @@ A Flutter project to build a modern and stylish coffee shop application user int
   - [Features](#features)
   - [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
-    - [Installati](#installati)
+    - [Installation](#installation)
   - [Usage](#usage)
   - [Screenshots](#screenshots)
   - [Contributing](#contributing)
@@ -39,7 +39,7 @@ Before you begin, ensure you have met the following requirements:
 - Flutter SDK: [Install Flutter](https://flutter.dev/docs/get-started/install)
 - A code editor (VS Code, Android Studio, etc.)
 
-### Installati
+### Installation
 
 1. Clone the repository:
     ``sh
@@ -50,7 +50,7 @@ Before you begin, ensure you have met the following requirements:
     cd flutter_coffeeshop_ui
     ``
 3. Get the dependencies:
-    ``sh
+    `'sh
     flutter pub get
     ``
 
