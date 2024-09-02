@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_coffesshop_ui/models/coffe.dart';
-import 'package:flutter_coffesshop_ui/pages/home/dasboard_pages.dart';
-import 'package:flutter_coffesshop_ui/pages/home/detail_pages.dart';
-import 'package:flutter_coffesshop_ui/pages/onboard_pages.dart';
+
 import 'package:google_fonts/google_fonts.dart';
+
+import 'models/coffe.dart';
+import 'pages/home/dasboard_pages.dart';
+import 'pages/home/detail_pages.dart';
+import 'pages/onboard_pages.dart';
 
 
 

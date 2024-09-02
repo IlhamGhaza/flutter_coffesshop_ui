@@ -1,11 +1,13 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutter_coffesshop_ui/core/constants/colors.dart';
-import 'package:flutter_coffesshop_ui/core/widgets/button_primary.dart';
-import 'package:flutter_coffesshop_ui/models/coffe.dart';
+
 import 'package:gap/gap.dart';
 import 'package:intl/intl.dart';
 import 'package:readmore/readmore.dart';
+
+import '../../core/constants/colors.dart';
+import '../../core/widgets/button_primary.dart';
+import '../../models/coffe.dart';
 
 class DetailPage extends StatefulWidget {
   const DetailPage({super.key, required this.coffee});

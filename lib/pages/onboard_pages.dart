@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_coffesshop_ui/core/constants/colors.dart';
-import 'package:flutter_coffesshop_ui/core/widgets/button_primary.dart';
+
 import 'package:gap/gap.dart';
+
+import '../core/constants/colors.dart';
+import '../core/widgets/button_primary.dart';
 
 class OnboardPages extends StatelessWidget {
   const OnboardPages({super.key});

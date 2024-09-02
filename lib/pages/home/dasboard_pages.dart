@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_coffesshop_ui/core/constants/colors.dart';
-import 'package:flutter_coffesshop_ui/pages/home/fragments/home_fragments.dart';
+
 import 'package:gap/gap.dart';
+
+import '../../core/constants/colors.dart';
+import 'fragments/home_fragments.dart';
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({super.key});
